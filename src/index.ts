@@ -86,3 +86,9 @@ overloading()
 //ハイブリッド型
 import hybrid from "./object/hybrid";
 hybrid()
+
+import partial from "./utilityTypes/partial";
+partial()
+
+import pick from "./utilityTypes/pick";
+pick()

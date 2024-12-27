@@ -55,4 +55,16 @@ export default function genericsBasicSample() {
     //呼び出しシグネチャの省略方法
     type GenericReduce3<T> = (array: T[], initiaValue: T) => T
     type GenericReduce4 = <T>(array: T[], initiaValue: T) => T
+
+    interface Product {
+        name: string;
+        price: number;
+    }
+    
+    const displayItem = <T extends Product>(item: T): string => {
+        return `${item.name} costs $${item.price}`;
+    };
+    
+    const item = { name: 'Laptop', price: 999 };
+    console.log(displayItem(item));  // 出力: Laptop costs $999
 }
